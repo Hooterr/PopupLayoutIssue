@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Size="300, 300"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             x:Class="PopupLayoutIssue.Popup123">
+
+    <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto">
+        <Label x:Name="testlabel1" BackgroundColor="Red" HorizontalTextAlignment="Center"></Label>
+        <Label x:Name="testlabel2" Grid.Row="1"></Label>
+        
+        <VerticalStackLayout
+            Grid.Row="2"
+            Spacing="4">
+            <Label x:Name="testlabel3" BackgroundColor="Red" HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="testlabel4" Grid.Row="1"></Label>
+
+        </VerticalStackLayout>
+        
+    </Grid>
+</toolkit:Popup>
