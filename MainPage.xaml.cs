@@ -16,7 +16,12 @@ public partial class MainPage : ContentPage
 
 	private void Button_OnClicked(object sender, EventArgs e)
 	{
-		this.ShowPopup(new Popup2());
+		if (ClearParent.IsEnabled)
+		{
+			ClearParent.IsEnabled = false;
+			ClearParentText.Text += " (restart the app to change it again, otherwise you'll not be able to see the effect)";
+		}
+		this.ShowPopup(new Popup2(ClearParent.IsChecked));
 	}
 }
 

@@ -13,6 +13,10 @@
         <Button Text="Open popup" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCounterClicked"/>
        
         <Label Padding="0,50,0,0" HorizontalTextAlignment="Center" Text="Radio buttons bug"></Label>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <CheckBox x:Name="ClearParent"/>
+            <Label x:Name="ClearParentText" Text="Clear parent when closed" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
         <Button Text="Open popup" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_OnClicked"/>
 
     </VerticalStackLayout>

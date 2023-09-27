@@ -15,15 +15,21 @@ public partial class ViewModel : ObservableObject
 
 public partial class Popup2
 {
-    public Popup2()
+    private readonly bool _clearParent;
+    public Popup2(bool clearParent)
     {
+        _clearParent = clearParent;
         InitializeComponent();
         Content.BindingContext = new ViewModel();
     }
 
     protected override Task OnClosed(object result, bool wasDismissedByTappingOutsideOfPopup)
     {
-        Content.Parent = null;
+        if (_clearParent)
+        {
+            Content.Parent = null;
+        }
+
         return base.OnClosed(result, wasDismissedByTappingOutsideOfPopup);
     }
 }
