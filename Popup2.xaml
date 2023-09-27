@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:popupLayoutIssue="clr-namespace:PopupLayoutIssue"
+             Size="300, 300"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             x:Class="PopupLayoutIssue.Popup2"
+             x:DataType="popupLayoutIssue:ViewModel">
+
+    <VerticalStackLayout
+        Padding="5"
+        RadioButtonGroup.GroupName="G"
+        RadioButtonGroup.SelectedValue="{Binding Selected}">
+        <RadioButton GroupName="G" Content="{Binding Source={RelativeSource Mode=Self}, Path=IsChecked, StringFormat='0, IsChecked: {0}'}" Value="{x:Int32 0}"/>
+        <RadioButton GroupName="G" Content="{Binding Source={RelativeSource Mode=Self}, Path=IsChecked, StringFormat='1, IsChecked: {0}'}" Value="{x:Int32 1}"/>
+        <RadioButton GroupName="G" Content="{Binding Source={RelativeSource Mode=Self}, Path=IsChecked, StringFormat='2, IsChecked: {0}'}" Value="{x:Int32 2}"/>
+        <Label Text="{Binding Selected, StringFormat='Selected value: {0}'}" />
+    </VerticalStackLayout>
+</toolkit:Popup>

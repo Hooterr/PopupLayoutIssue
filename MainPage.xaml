@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PopupLayoutIssue.MainPage">
+             x:Class="PopupLayoutIssue.MainPage"
+             Title="Popup bugs">
 
     <VerticalStackLayout VerticalOptions="Center">
+        <Label HorizontalTextAlignment="Center" Text="Popup size bus"></Label>
         <HorizontalStackLayout HorizontalOptions="Center">
             <CheckBox x:Name="ImmediateData"/>
             <Label Text="Don't delay data" VerticalTextAlignment="Center"/>
         </HorizontalStackLayout>
         <Button Text="Open popup" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCounterClicked"/>
+       
+        <Label Padding="0,50,0,0" HorizontalTextAlignment="Center" Text="Radio buttons bug"></Label>
+        <Button Text="Open popup" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_OnClicked"/>
 
     </VerticalStackLayout>
 </ContentPage>

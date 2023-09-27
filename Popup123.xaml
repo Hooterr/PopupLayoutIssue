@@ -7,7 +7,7 @@
              VerticalOptions="Center"
              x:Class="PopupLayoutIssue.Popup123">
 
-    <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto">
+    <Grid ColumnDefinitions="300" RowDefinitions="auto,auto,auto">
         <Label x:Name="testlabel1" BackgroundColor="Red" HorizontalTextAlignment="Center"></Label>
         <Label x:Name="testlabel2" Grid.Row="1"></Label>
         

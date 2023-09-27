@@ -4,7 +4,6 @@ namespace PopupLayoutIssue;
 
 public partial class MainPage : ContentPage
 {
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -13,6 +12,11 @@ public partial class MainPage : ContentPage
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
 		this.ShowPopup(new Popup123(ImmediateData.IsChecked));
+	}
+
+	private void Button_OnClicked(object sender, EventArgs e)
+	{
+		this.ShowPopup(new Popup2());
 	}
 }
 
